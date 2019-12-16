@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity, ScrollView } from 'react-native';
 
 class App extends React.Component {
   state = {
@@ -43,6 +43,7 @@ class App extends React.Component {
   render(){
     return (
       <View style={styles.generalStyle}>
+        <ScrollView>
         <View style={styles.innerStyle}>
           <Text style={styles.header}>Contact App</Text>
           <Text>Nama</Text>
@@ -72,6 +73,7 @@ class App extends React.Component {
           <View style={{marginTop: 100}}/>
             {this.tampilContacts()}
         </View>
+        </ScrollView>
       </View>
     );
   }  
